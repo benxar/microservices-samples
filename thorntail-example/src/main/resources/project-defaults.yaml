@@ -1,6 +1,11 @@
 thorntail:
-  http:
-    port: 8081
+#  http:
+#    port: 8081
+  network:
+    socket-binding-groups:
+      standard-sockets:
+        port-offset: 1
+        default-interface: public    
   deployment:
     thorntail-example-1.0.0.war:
       web:
@@ -9,3 +14,4 @@ thorntail:
         security-constraints:
           - url-pattern: /*
             methods: [GET]
+            roles: [admin]

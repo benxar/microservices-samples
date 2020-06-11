@@ -50,12 +50,12 @@
   "devDependencies": {
     "coveralls": "^3.0.0",
     "js-yaml": "^3.10.0",
-    "nodeshift": "~2.0.0",
+    "nodeshift": "^6.2.0",
     "nsp": "~3.2.1",
-    "nyc": "~12.0.2",
+    "nyc": "^15.1.0",
     "proxyquire": "^2.0.0",
-    "rhoaster": "~0.2.0",
-    "standard-version": "^4.3.0",
+    "rhoaster": "^0.4.1",
+    "standard-version": "^8.0.0",
     "supertest": "^3.0.0",
     "szero": "^1.0.0",
     "tap-spec": "~5.0.0",
@@ -66,7 +66,12 @@
     "body-parser": "^1.18.2",
     "debug": "^4.0.1",
     "express": "4.16.0",
+    "express-session": "^1.17.0",
+    "morgan": "^1.7.0",
+    "ejs": "^2.4.1",
     "kube-probe": "^0.3.1",
+    "keycloak-connect": "8.0.1",
+    "cors": "^2.8.5",
     "license-reporter": "^1.2.0"
   }
 }
