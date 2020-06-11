@@ -1,0 +1,177 @@
+objects:
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    creationTimestamp: null
+    labels:
+      app: nodejs-example
+    name: centos7-s2i-nodejs
+  spec:
+    lookupPolicy:
+      local: false
+    tags:
+    - from:
+        kind: DockerImage
+        name: nodeshift/centos7-s2i-nodejs
+      generation: null
+      importPolicy: {}
+      name: latest
+      referencePolicy:
+        type: ''
+  status:
+    dockerImageRepository: ''
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    creationTimestamp: null
+    labels:
+      app: nodejs-example
+    name: nodejs-example
+  spec:
+    lookupPolicy:
+      local: false
+  status:
+    dockerImageRepository: ''
+- apiVersion: build.openshift.io/v1
+  kind: BuildConfig
+  metadata:
+    creationTimestamp: null
+    labels:
+      app: nodejs-example
+    name: nodejs-example
+  spec:
+    nodeSelector: null
+    output:
+      to:
+        kind: ImageStreamTag
+        name: nodejs-example:latest
+    postCommit: {}
+    resources: {}
+    source:
+      git:
+        uri: ${SOURCE_REPOSITORY_URL}
+      type: Git
+    strategy:
+      sourceStrategy:
+        from:
+          kind: ImageStreamTag
+          name: centos7-s2i-nodejs:latest
+        incremental: true
+        env: []
+      type: Source
+    triggers:
+    - type: GitHub
+      github:
+        secret: ${GITHUB_WEBHOOK_SECRET}
+    - type: ConfigChange
+    - type: ImageChange
+      imageChange: {}
+  status:
+    lastVersion: 0
+- apiVersion: apps.openshift.io/v1
+  kind: DeploymentConfig
+  metadata:
+    creationTimestamp: null
+    labels:
+      app: nodejs-example
+    name: nodejs-example
+  spec:
+    replicas: 1
+    selector:
+      app: nodejs-example
+      deploymentconfig: nodejs-example
+    strategy:
+      resources: {}
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: nodejs-example
+          deploymentconfig: nodejs-example
+      spec:
+        containers:
+        - image: nodejs-example:latest
+          name: nodejs-example
+          ports:
+          - containerPort: 8080
+            protocol: TCP
+          resources:
+            limits:
+              memory: 768Mi
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+              scheme: HTTP
+            initialDelaySeconds: 5
+            timeoutSeconds: 3
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+              scheme: HTTP
+            initialDelaySeconds: 120
+            timeoutSeconds: 3
+          env: []
+    test: false
+    triggers:
+    - type: ConfigChange
+    - imageChangeParams:
+        automatic: true
+        containerNames:
+        - nodejs-example
+        from:
+          kind: ImageStreamTag
+          name: nodejs-example:latest
+      type: ImageChange
+  status:
+    availableReplicas: 0
+    latestVersion: 0
+    observedGeneration: 0
+    replicas: 0
+    unavailableReplicas: 0
+    updatedReplicas: 0
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: null
+    labels:
+      app: nodejs-example
+    name: nodejs-example
+  spec:
+    ports:
+    - name: 8080-tcp
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app: nodejs-example
+      deploymentconfig: nodejs-example
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Route
+  metadata:
+    name: nodejs-example
+    labels:
+      app: nodejs-example
+  spec:
+    port:
+      targetPort: 8080-tcp
+    to:
+      kind: Service
+      name: nodejs-example
+parameters:
+- name: SOURCE_REPOSITORY_URL
+  description: The source URL for the application
+  displayName: Source URL
+  value: https://github.com/dummy_org/dummy_repo
+  required: true
+- name: GITHUB_WEBHOOK_SECRET
+  description: The secret used to configure a GitHub webhook
+  displayName: GitHub Webhook Secret
+  required: true
+  from: '[a-zA-Z0-9]{40}'
+  generate: expression
+apiVersion: template.openshift.io/v1
+kind: Template

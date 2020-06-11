@@ -22,7 +22,7 @@
     <version>24</version>
   </parent>
   <groupId>org.openshift.appgen</groupId>
-  <artifactId>my-app</artifactId>
+  <artifactId>thorntail-example</artifactId>
   <version>1.0.0</version>
   <packaging>war</packaging>
   <name>thorntail-example</name>
@@ -36,6 +36,10 @@
       <groupId>io.thorntail</groupId>
       <artifactId>microprofile-health</artifactId>
     </dependency>
+    <dependency>
+      <groupId>io.thorntail</groupId>
+      <artifactId>keycloak</artifactId>
+   </dependency>    
     <dependency>
       <groupId>io.thorntail</groupId>
       <artifactId>jaxrs-jsonp</artifactId>
@@ -206,4 +210,3 @@
     <version.awaitility>3.1.0</version.awaitility>
   </properties>
 </project>
-
