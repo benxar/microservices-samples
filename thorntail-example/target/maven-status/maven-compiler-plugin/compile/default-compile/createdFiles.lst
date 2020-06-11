@@ -1,0 +1,3 @@
+io/openshift/booster/RestApplication.class
+io/openshift/booster/http/GreetingEndpoint.class
+io/openshift/booster/http/Greeting.class
