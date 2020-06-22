@@ -66,4 +66,12 @@ public class Error {
         this.message = message;
     }
 
+	public Error() {}
+
+
+	public Error(Integer code, String message) {
+		this.code = code;
+		this.message = message;
+	}    
+
 }

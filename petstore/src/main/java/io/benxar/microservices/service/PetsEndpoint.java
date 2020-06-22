@@ -21,7 +21,9 @@ public class PetsEndpoint  {
 	}
 
     @DeleteMapping("/{id}")
-    public void deletePet(@PathVariable("id") Integer id) {}
+    public Error deletePet(@PathVariable("id") Integer id) {
+        return new Error(0, "string"); 
+    }
     
 
     @GetMapping("/{id}")
