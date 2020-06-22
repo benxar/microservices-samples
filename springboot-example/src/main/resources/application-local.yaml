@@ -1,0 +1,22 @@
+server:
+    port: 8090
+
+keycloak:
+    enabled: true
+    realm: workshop
+    #public-client: true
+    credentials:
+        secret: 451c21ba-3869-4e79-b0cd-8ea2065f94ef
+    auth-server-url: http://127.0.0.1:8080/auth
+    ssl-required: external
+    resource: springboot-example
+    verify-token-audience: true
+    use-resource-role-mappings: true
+    confidential-port: 0    
+    securityConstraints:
+    -   authRoles:
+        - greeter
+        securityCollections:
+        -   name: greeter
+            patterns:
+            - /api/*
