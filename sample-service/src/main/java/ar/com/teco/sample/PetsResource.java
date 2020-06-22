@@ -1,7 +1,7 @@
-package ar.com.teco.apification;
+package ar.com.teco.sample;
 
-import ar.com.teco.apification.beans.NewPet;
-import ar.com.teco.apification.beans.Pet;
+import ar.com.teco.sample.beans.NewPet;
+import ar.com.teco.sample.beans.Pet;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

@@ -1,4 +1,4 @@
-package ar.com.teco.apification;
+package ar.com.teco.sample;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.ApplicationPath;

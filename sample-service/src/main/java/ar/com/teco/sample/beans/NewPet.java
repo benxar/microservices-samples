@@ -1,5 +1,5 @@
 
-package ar.com.teco.apification.beans;
+package ar.com.teco.sample.beans;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
