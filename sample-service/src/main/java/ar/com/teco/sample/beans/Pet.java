@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "name",
     "tag"
 })
-public class NewPet {
+public class Pet {
 
     /**
      * 

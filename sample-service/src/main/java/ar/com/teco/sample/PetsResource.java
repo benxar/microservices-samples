@@ -1,6 +1,5 @@
 package ar.com.teco.sample;
 
-import ar.com.teco.sample.beans.NewPet;
 import ar.com.teco.sample.beans.Pet;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +32,7 @@ public interface PetsResource {
   @POST
   @Produces("application/json")
   @Consumes("application/json")
-  Pet addPet(NewPet data);
+  Pet addPet(Pet data);
 
   /**
    * Returns a user based on a single ID, if the user does not have
@@ -42,12 +41,12 @@ public interface PetsResource {
   @Path("/{id}")
   @GET
   @Produces("application/json")
-  Pet findPetById(@PathParam("id") Integer id, @PathParam("id") long id);
+  Pet findPetById(@PathParam("id") Integer id);
 
   /**
    * deletes a single pet based on the ID supplied
    */
   @Path("/{id}")
   @DELETE
-  void deletePet(@PathParam("id") Integer id, @PathParam("id") long id);
+  void deletePet(@PathParam("id") Integer id);
 }
