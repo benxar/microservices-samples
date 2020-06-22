@@ -33,8 +33,12 @@ public class PetsEndpoint  {
     public List<Pet> findPets(
         @RequestParam(name = "tags", required = false) List<String> tags,
         @RequestParam(name = "limit", required = false) Integer limit) {
-        return new ArrayList<Pet>();
+        List<Pet> results = new ArrayList<Pet>();
+        results.add(new Pet(1, "Zaza", "cat"));
+        results.add(new Pet(2, "Tigresse", "cat"));
+        results.add(new Pet(3, "Maki", "cat"));
+        results.add(new Pet(4, "Toufik", "cat"));
+        return results;
 	}
-    
     
 }

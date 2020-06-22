@@ -16,39 +16,42 @@ public class Pet {
      * (Required)
      * 
      */
+    @JsonProperty("id")
+    private long id;
     @JsonProperty("name")
     private String name;
     @JsonProperty("tag")
     private String tag;
 
-    /**
-     * 
-     * (Required)
-     * 
-     */
-    @JsonProperty("name")
+    
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+    
     public String getName() {
         return name;
     }
 
-    /**
-     * 
-     * (Required)
-     * 
-     */
-    @JsonProperty("name")
     public void setName(String name) {
         this.name = name;
     }
 
-    @JsonProperty("tag")
     public String getTag() {
         return tag;
     }
 
-    @JsonProperty("tag")
     public void setTag(String tag) {
         this.tag = tag;
     }
 
+	public Pet(long id, String name, String tag) {
+		this.id = id;
+		this.name = name;
+		this.tag = tag;
+	}
 }
