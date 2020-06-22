@@ -17,7 +17,7 @@ public class PetsEndpoint  {
 
     @PostMapping()
     public Pet addPet(Pet data) {
-		return null;
+		return new Pet(2, "Tigresse", "cat");
 	}
 
     @DeleteMapping("/{id}")
@@ -26,7 +26,7 @@ public class PetsEndpoint  {
 
     @GetMapping("/{id}")
     public Pet findPetById(@PathVariable("id") Integer id) {
-		return null;
+		return new Pet(1, "Zaza", "cat");
 	}
 
     @GetMapping()
