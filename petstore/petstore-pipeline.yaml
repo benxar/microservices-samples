@@ -1,0 +1,40 @@
+kind: "BuildConfig"
+apiVersion: "v1"
+metadata:
+  name: "nodejs-sample-pipeline"
+spec:
+  strategy:
+    type: JenkinsPipeline
+    jenkinsPipelineStrategy: |-
+      pipeline {
+        agent {
+          node {
+            label 'api petstore'
+          }
+        }
+        stages {
+          stage('build') {
+            steps {
+
+            }
+          }
+          stage ('testInDev') {
+            // Add Microcks test here.
+            steps {
+              scripts {
+                microcksTest(server: 'microcksServer', serviceId: 'petstore - 1.0.0', testEndpoint: 'http://petstore-3scale-sandbox.apps-rp.cloudteco.com.ar', runnerType: 'POSTMAN', verbose: 'true')
+              }
+            }
+          }
+          stage('deploy') {
+            steps {
+
+            }
+          }
+          stage('tag') {
+            steps {
+
+            }
+          }
+        }
+      }

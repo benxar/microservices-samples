@@ -1,8 +1,10 @@
-  {
-    "realm": "workshop",
-    "auth-server-url": "http://127.0.0.1:8080/auth",
-    "ssl-required": "external",
-    "resource": "mock-service",
-    "public-client": true,
-    "confidential-port": 0
-  }
+{
+  "realm": "sandbox",
+  "auth-server-url": "https://sso-103342902197955055844-ntier.6923.rh-us-east-1.openshiftapps.com/auth",
+  "ssl-required": "external",
+  "resource": "mock-service",
+  "credentials": {
+    "secret": "a3a27541-6be7-416a-ae2c-d2dfd4febaee"
+  },
+  "confidential-port": 0
+}
