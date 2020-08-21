@@ -38,7 +38,8 @@ var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
 // Allow CORS
 app.use(cors());
 
-app.use('/api', keycloak.protect(), apiRouter);
+//app.use('/api', keycloak.protect(), apiRouter);
+app.use('/api', apiRouter);
 
 // error handling
 app.use(function(err, req, res, next){
