@@ -1,8 +1,8 @@
-  {
-    "realm": "workshop",
-    "auth-server-url": "http://127.0.0.1:8080/auth",
-    "ssl-required": "external",
-    "resource": "mock-service",
-    "public-client": true,
-    "confidential-port": 0
-  }
+{
+  "realm": "test01",
+  "auth-server-url": "https://sso-rhsso-workshop.b9ad.pro-us-east-1.openshiftapps.com/auth",
+  "ssl-required": "external",
+  "resource": "mock-service",
+  "public-client": true,
+  "confidential-port": 0
+}
