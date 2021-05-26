@@ -30,21 +30,21 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/spring-webmvc/4.3.20.RELEASE/spring-webmvc-4.3.20.RELEASE.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/spring-expression/4.3.20.RELEASE/spring-expression-4.3.20.RELEASE.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/keycloak/keycloak-spring-boot-starter/3.4.3.Final/keycloak-spring-boot-starter-3.4.3.Final.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/org/keycloak/keycloak-spring-boot-adapter/8.0.1/keycloak-spring-boot-adapter-8.0.1.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/org/keycloak/keycloak-spring-boot-adapter-core/8.0.1/keycloak-spring-boot-adapter-core-8.0.1.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/org/keycloak/keycloak-core/8.0.1/keycloak-core-8.0.1.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/org/keycloak/keycloak-common/8.0.1/keycloak-common-8.0.1.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/com/sun/activation/jakarta.activation/1.2.1/jakarta.activation-1.2.1.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/org/bouncycastle/bcpkix-jdk15on/1.60/bcpkix-jdk15on-1.60.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/org/keycloak/keycloak-authz-client/8.0.1/keycloak-authz-client-8.0.1.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/keycloak/keycloak-spring-boot-adapter/9.0.12.redhat-00001/keycloak-spring-boot-adapter-9.0.12.redhat-00001.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/keycloak/keycloak-spring-boot-adapter-core/9.0.12.redhat-00001/keycloak-spring-boot-adapter-core-9.0.12.redhat-00001.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/keycloak/keycloak-core/9.0.12.redhat-00001/keycloak-core-9.0.12.redhat-00001.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/keycloak/keycloak-common/9.0.12.redhat-00001/keycloak-common-9.0.12.redhat-00001.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/com/sun/activation/jakarta.activation/1.2.1.redhat-00002/jakarta.activation-1.2.1.redhat-00002.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/bouncycastle/bcpkix-jdk15on/1.68.0.redhat-00001/bcpkix-jdk15on-1.68.0.redhat-00001.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/keycloak/keycloak-authz-client/9.0.12.redhat-00001/keycloak-authz-client-9.0.12.redhat-00001.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/apache/httpcomponents/httpclient/4.5.6/httpclient-4.5.6.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/apache/httpcomponents/httpcore/4.4.10/httpcore-4.4.10.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/org/keycloak/spring-boot-container-bundle/8.0.1/spring-boot-container-bundle-8.0.1.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/org/keycloak/keycloak-spring-security-adapter/8.0.1/keycloak-spring-security-adapter-8.0.1.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/org/keycloak/keycloak-adapter-spi/8.0.1/keycloak-adapter-spi-8.0.1.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/org/keycloak/keycloak-adapter-core/8.0.1/keycloak-adapter-core-8.0.1.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/keycloak/spring-boot-container-bundle/9.0.12.redhat-00001/spring-boot-container-bundle-9.0.12.redhat-00001.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/keycloak/keycloak-spring-security-adapter/9.0.12.redhat-00001/keycloak-spring-security-adapter-9.0.12.redhat-00001.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/keycloak/keycloak-adapter-spi/9.0.12.redhat-00001/keycloak-adapter-spi-9.0.12.redhat-00001.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/keycloak/keycloak-adapter-core/9.0.12.redhat-00001/keycloak-adapter-core-9.0.12.redhat-00001.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/org/bouncycastle/bcprov-jdk15on/1.60/bcprov-jdk15on-1.60.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/bouncycastle/bcprov-jdk15on/1.68.0.redhat-00001/bcprov-jdk15on-1.68.0.redhat-00001.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/boot/spring-boot-configuration-processor/1.5.17.RELEASE/spring-boot-configuration-processor-1.5.17.RELEASE.jar" enabled="true" runInBatchMode="false"/>
 </factorypath>
