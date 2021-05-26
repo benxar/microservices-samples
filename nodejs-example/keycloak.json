@@ -1,8 +1,12 @@
 {
-  "realm": "workshop",
-  "auth-server-url": "http://127.0.0.1:8080/auth",
+  "realm": "test",
+  "auth-server-url": "http://127.0.0.1:8180/auth",
   "ssl-required": "external",
-  "resource": "mock-service",
-  "public-client": true,
-  "confidential-port": 0
+  "resource": "portal-digital",
+  "verify-token-audience": true,
+  "credentials": {
+    "secret": "daedbfdc-4e77-4eb1-8cde-a6c30a8747f2"
+  },
+  "confidential-port": 0,
+  "policy-enforcer": {}
 }
