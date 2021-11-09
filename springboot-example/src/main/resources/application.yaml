@@ -5,7 +5,7 @@ server:
             enabled: false
 
 keycloak:
-    enabled: true
+    enabled: false
     realm: workshop
     bearer-only: true
     credentials:
